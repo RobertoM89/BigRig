@@ -11,21 +11,20 @@ It provides some quick commands to create FK and IK chains, it helps in rigging 
 
 ***
 
-- <a href="https://robertom89.github.io/BigRig/#download-and-install">Download and Install</a>
-- [Download and Install](#download-and-install)
+- [Download and Install](https://robertom89.github.io/BigRig/#download-and-install)
 - [Interface](https://robertom89.github.io/BigRig/#interface)
-- [How to Rig Character Limbs with BigRig](#how-to-rig-character-limbs-with-bigrig)
-    - [Rigging the Legs](#rigging-the-legs)
-    - [Rigging the Arms](#rigging-the-arms)
-    - [Rigging the Hands](#rigging-the-hands)
-    - [Replacing a Control Curve](#replacing-a-control-curve)
-- [Commands](#commands)
-    - [Generic Commands](#generic-commands)
-    - [Arm Rig](#arm-rig)
-    - [Hand Rig](#hand-rig)
-    - [Leg Rig](#leg-rig)
-    - [Control Commands](#control-commands)
-    - [Shapes](#shapes)
+- [How to Rig Character Limbs with BigRig](https://robertom89.github.io/BigRig/#how-to-rig-character-limbs-with-bigrig)
+    - [Rigging the Legs](https://robertom89.github.io/BigRig/#rigging-the-legs)
+    - [Rigging the Arms](https://robertom89.github.io/BigRig/#rigging-the-arms)
+    - [Rigging the Hands](https://robertom89.github.io/BigRig/#rigging-the-hands)
+    - [Replacing a Control Curve](https://robertom89.github.io/BigRig/#replacing-a-control-curve)
+- [Commands](https://robertom89.github.io/BigRig/#commands)
+    - [Generic Commands](https://robertom89.github.io/BigRig/#generic-commands)
+    - [Arm Rig](https://robertom89.github.io/BigRig/#arm-rig)
+    - [Hand Rig](https://robertom89.github.io/BigRig/#hand-rig)
+    - [Leg Rig](https://robertom89.github.io/BigRig/#leg-rig)
+    - [Control Commands](https://robertom89.github.io/BigRig/#control-commands)
+    - [Shapes](https://robertom89.github.io/BigRig/#shapes)
 
 ***
 
@@ -82,7 +81,7 @@ Both legs are now rigged with FK and IK controls, which can be switched from the
 
 If the command is run on Maya 2020, the knee twist can be controlled from the **Knee Twist** attribute of the foot control in the Channel Box. You can turn off the visibility of the knee control shape from the foot control.
 
-If you want to change any of the control curves created by the script refer to **[Replacing a Control Curve](#replacing-a-control-curve)** Section.
+If you want to change any of the control curves created by the script refer to **[Replacing a Control Curve](https://robertom89.github.io/BigRig/#replacing-a-control-curve)** Section.
  
 ### Rigging the Arms
 Start creating a joint chain by placing the *shoulder, elbow* and *wrist* joints on the character's left arm. You don't need to rename them, as they will be automatically renamed by the script.  
@@ -101,7 +100,7 @@ Both arms are now rigged with FK and IK controls, which can be switched from the
 
 Run the commands **Create Shoulder Twist** and **Create Elbow Twist** if you want to add twist joints to the upper arm and the forearm.
 
-If you want to change any of the control curves created by the script refer to **[Replacing a Control Curve](#replacing-a-control-curve)** Section.
+If you want to change any of the control curves created by the script refer to **[Replacing a Control Curve](https://robertom89.github.io/BigRig/#replacing-a-control-curve)** Section.
 
 ### Rigging the Hands
 After executing the **Rig Arm** command for each arm, you can run the command **Create Hand Joints** by selecting left side on BigRig.
@@ -128,7 +127,7 @@ Now run **Rig Hand** command for each side after inserting a scale factor for th
 
 The control of each hand, *L_Hand_CTRL* and *R_Hand_CTRL*, is now enriched with attributes to control the *curl*, the *spread*, the *backward fan*, the *forward fan*, the *palm cup* a the *palm spread* of the hand as well as the curl and the spread of each individual finger. Control curves are also created for each finger knuckle joint and their visibility can be toggled from an attribute in the hand control.
 
-If you want to change any of the control curves created by the script refer to **[Replacing a Control Curve](#replacing-a-control-curve)** Section.
+If you want to change any of the control curves created by the script refer to **[Replacing a Control Curve](https://robertom89.github.io/BigRig/#replacing-a-control-curve)** Section.
 
 The behavior of each attribute is handled automatically via nodes, but the default values in the different MultiplyDivide nodes may not be suitable for the character mesh you are using. In order to tune these values you could open the node editor and look for each specific node, but this would be a tedious and prone to error task. Run BigRig command **Open Hand Tuner** to open a window showing all the multipliers for each required node, as displayed in figure.
 
