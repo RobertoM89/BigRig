@@ -11,9 +11,9 @@ It provides some quick commands to create FK and IK chains, it helps in rigging 
 
 ***
 
-- <a href="https://robertom89.github.io/BigRig/#download-and-install">Download</a>
+- <a href="https://robertom89.github.io/BigRig/#download-and-install">Download and Install</a>
 - [Download and Install](#download-and-install)
-- [Interface](#interface)
+- [Interface](https://robertom89.github.io/BigRig/#interface)
 - [How to Rig Character Limbs with BigRig](#how-to-rig-character-limbs-with-bigrig)
     - [Rigging the Legs](#rigging-the-legs)
     - [Rigging the Arms](#rigging-the-arms)
