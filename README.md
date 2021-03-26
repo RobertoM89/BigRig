@@ -1,7 +1,7 @@
 BigRig - Rig Tools for Autodesk Maya
 ======================================
 ***
-**Version 0.99**  
+**Version 0.99 UPDATE HERE**  
 **Compatibility: Maya 2019, 2020 - Python 2.7**
 
 The latest release of BigRig is available for **download [here (UPDATE LINK)](https://github.com/RobertoM89/BigRig/releases/download/v0.99/BigRig_v0.99.zip)**.
@@ -63,20 +63,26 @@ First of all make sure that your character is correctly oriented in Maya world, 
 In order to orient the joints correctly we suggest the use of **[Coplanar Joint Orient](https://www.highend3d.com/maya/script/coplanar-joint-orient-for-maya?fbclid=IwAR3wDCc4zsXJugIkTgvRCSoMtmMtNFhxc4ybH8MriBu5dxjOVF1MRRFY7KY)** script by Ilya Seletsky.
 
 ### Rigging the Legs
-Start creating a joint chain by placing the *hip, knee, ankle, foot* and *toe* joints on the character's left leg. You don't need to rename them, as they will be automatically renamed by the script.  
+Start creating a joint chain by placing the *hip, knee, ankle, foot* and *toe* joints on the character's left or right leg. You don't need to rename them, as they will be automatically renamed by the script.  
 Use **Coplanar Joint Orient** script to orient the joints by selecting X as the aim axis, Z axis as the turning axis and so that the Y axis of the foot joint is directed upwards, as Maya world Y axis. Orient the toe joint as its parent joint: click on Maya menu *Skeleton → Orient Joint (options)*, tick *Orient Joint to World* and click *Orient*. Then freeze the rotations of the joints.  
-Create two locators, called **L_Toe_Roll_LOC** and **L_Heel_Roll_LOC** and place them where you want the rotation pivots for toe roll and heel roll to be.  
+Create two locators, called **L_Toe_Roll_LOC** and **L_Heel_Roll_LOC** (replace **L_** with **R_** if you choose to start with the right leg) and place them where you want the rotation pivots for toe roll and heel roll to be.  
 
-Now select the first joint of the chain and mirror the chain onto the right leg: click on Maya menu *Skeleton → Mirror Joints (options)*, tick *YZ* and *Behavior* and click *Mirror*.  
+<!-- Now select the first joint of the chain and mirror the chain onto the right leg: click on Maya menu *Skeleton → Mirror Joints (options)*, tick *YZ* and *Behavior* and click *Mirror*.  
 Use again **Coplanar Joint Orient** script to orient the joints in the same way you did for the left leg, orient the last joint as its parent and then freeze the rotations of the joints.  
 Select **L_Toe_Roll_LOC**, and click on the **Mirror Curve** BigRig command after ticking *X* as mirroring axis. The script will create a new locator called **R_Toe_Roll_LOC** at the corresponding position of the right leg.
-Do the same for **L_Heel_Roll_LOC**.
+Do the same for **L_Heel_Roll_LOC**. -->
 
-<img src="https://robertom89.github.io/BigRig/images/leg_rig_01.jpg" alt="Legs" width="400"/>
+<img src="https://robertom89.github.io/BigRig/images/leg_rig_02.jpg" alt="Legs" width="400"/>
 
-Before running the **Rig Leg** BigRig command, select the five joints of the left chain from hip to toe, insert a scale factor for the control shapes, select the leg side you want to rig and finally run the command. In order to know which scale factor to use, you can create a temporary Nurbs circle, match it with a joint and scale it until it reaches the desired size. Copy the scale value from the Channel Box, delete the circle you just created and paste the scale value inside BigRig.
+Then:
+- select the five joints of the chain from hip to toe;
+- on the left side of BigRig command **Rig Leg** insert a scale factor for the control shapes;
+- select the leg side according to where you placed the joint chain;
+- finally run one of the two BigRig commands **Rig Leg** or **Rig Leg and Mirror**. Run the first one if you need to rig one leg only, run the second one to rig both legs without the need to mirror anything manually. 
 
-Do the same for the right leg.
+In order to know which scale factor to use, you can create a temporary Nurbs circle, match it with a joint and scale it until it reaches the desired size. Copy the scale value from the Channel Box, delete the circle you just created and paste the scale value inside BigRig.
+
+<!-- Do the same for the right leg. -->
 
 Both legs are now rigged with FK and IK controls, which can be switched from the attribute of **Foot_Switch_CTRL** placed at the back of each ankle joint.
 
@@ -88,14 +94,20 @@ If you want to change any of the control curves created by the script refer to *
 Start creating a joint chain by placing the *shoulder, elbow* and *wrist* joints on the character's left arm. You don't need to rename them, as they will be automatically renamed by the script.  
 Use **Coplanar Joint Orient** script to orient the joints by selecting X as the aim axis, Z axis as the turning axis and so that the Y axis of the joints is pointing towards the inner side of the arm bend. Orient the wrist joint as its parent joint: click on Maya menu *Skeleton → Orient Joint (options)*, tick *Orient Joint to World* and click *Orient*. Then freeze the rotations of the joints.  
 
-Now select the first joint of the chain and mirror the chain onto the right arm: click on Maya menu *Skeleton → Mirror Joints (options)*, tick *YZ* and *Behavior* and click *Mirror*.  
-Use again **Coplanar Joint Orient** script to orient the joints in the same way you did for the left arm, orient the last joint as its parent and then freeze the rotations of the joints. 
+<!-- Now select the first joint of the chain and mirror the chain onto the right arm: click on Maya menu *Skeleton → Mirror Joints (options)*, tick *YZ* and *Behavior* and click *Mirror*.  
+Use again **Coplanar Joint Orient** script to orient the joints in the same way you did for the left arm, orient the last joint as its parent and then freeze the rotations of the joints.  -->
 
-<img src="https://robertom89.github.io/BigRig/images/arm_rig_01.jpg" alt="Arms" width="600"/>
+<img src="https://robertom89.github.io/BigRig/images/arm_rig_02.jpg" alt="Arms" width="600"/>
 
-Before running the **Rig Arm** BigRig command, select the shoulder joint of the left chain, insert a scale factor for the control shapes, select the arm side you want to rig and finally run the command. In order to know which scale factor to use, you can create a temporary Nurbs circle, match it with a joint and scale it until it reaches the desired size. Copy the scale value from the Channel Box, delete the circle you just created and paste the scale value inside BigRig.
+Then:
+- select the shoulder joint of the chain you just created;
+- on the left side of BigRig command **Rig Arm** insert a scale factor for the control shapes;
+- select the arm side according to where you placed the joint chain;
+- finally run one of the two BigRig commands **Rig Arm** or **Rig Arm and Mirror**. Run the first one if you need to rig one arm only, run the second one to rig both arms without the need to mirror anything manually. 
 
-Do the same for the right arm.
+In order to know which scale factor to use, you can create a temporary Nurbs circle, match it with a joint and scale it until it reaches the desired size. Copy the scale value from the Channel Box, delete the circle you just created and paste the scale value inside BigRig.
+
+<!-- Do the same for the right arm. -->
 
 Both arms are now rigged with FK and IK controls, which can be switched from the attribute of **Hand_CTRL** placed at the back of each wrist joint.
 
@@ -104,7 +116,7 @@ Run the commands **Create Shoulder Twist** and **Create Elbow Twist** if you wan
 If you want to change any of the control curves created by the script refer to **[Replacing a Control Curve](https://robertom89.github.io/BigRig/#replacing-a-control-curve)** Section.
 
 ### Rigging the Hands
-After executing the **Rig Arm** command for each arm, you can run the command **Create Hand Joints** by selecting left side on BigRig.
+After rigging both arms with either the **Rig Arm** command or the **Rig Arm and Mirror** command, you can run the command **Create Hand Joints** by selecting either the left or right side on BigRig.
 
 This command creates five joint chains parented to the wrist joint of the selected arm, named as in the following figure.
 
@@ -118,13 +130,20 @@ Rerun **Coplanar Joint Orient** on each finger for the finger *wrist* and the *b
 
 <img src="https://robertom89.github.io/BigRig/images/hand_joints_02.jpg" alt="Hand" width="400"/>
 
-In order to mirror the finger joint chains, you need to unparent them temporarily. For each finger, select *L_<finger>_Wrist_JNT*, unparent it and mirror its chain onto the right hand: click on Maya menu *Skeleton → Mirror Joints (options)*, tick *YZ* and *Behavior* and click *Mirror*. 
+<!-- In order to mirror the finger joint chains, you need to unparent them temporarily. For each finger, select *L_<finger>_Wrist_JNT*, unparent it and mirror its chain onto the right hand: click on Maya menu *Skeleton → Mirror Joints (options)*, tick *YZ* and *Behavior* and click *Mirror*. 
 
 Use again **Coplanar Joint Orient** script to orient the hand joints in the same way you did for the left hand, orient the last joint as its parent and then freeze the rotations of the joints. 
 
-Parent again each *L_<finger>_Wrist_JNT* and *R_<finger>_Wrist_JNT* to the corresponding wrist joint.
+Parent again each *L_<finger>_Wrist_JNT* and *R_<finger>_Wrist_JNT* to the corresponding wrist joint. -->
 
-Now run **Rig Hand** command for each side after inserting a scale factor for the control shapes. In order to know which scale factor to use, you can create a temporary Nurbs circle, match it with a joint and scale it until it reaches the desired size. Copy the scale value from the Channel Box, delete the circle you just created and paste the scale value inside BigRig.
+Then:
+- on the left side of BigRig command **Rig Hand** insert a scale factor for the control shapes;
+- select the hand side according to where you placed the joint chains;
+- finally run one of the two BigRig commands **Rig Hand** or **Rig Hand and Mirror**. Run the first one if you need to rig one hand only, run the second one to rig both hands without the need to mirror anything manually. 
+
+In order to know which scale factor to use, you can create a temporary Nurbs circle, match it with a joint and scale it until it reaches the desired size. Copy the scale value from the Channel Box, delete the circle you just created and paste the scale value inside BigRig.
+
+<!-- Now run **Rig Hand** command for each side after inserting a scale factor for the control shapes. In order to know which scale factor to use, you can create a temporary Nurbs circle, match it with a joint and scale it until it reaches the desired size. Copy the scale value from the Channel Box, delete the circle you just created and paste the scale value inside BigRig. -->
 
 The control of each hand, *L_Hand_CTRL* and *R_Hand_CTRL*, is now enriched with attributes to control the *curl*, the *spread*, the *backward fan*, the *forward fan*, the *palm cup* a the *palm spread* of the hand as well as the curl and the spread of each individual finger. Control curves are also created for each finger knuckle joint and their visibility can be toggled from an attribute in the hand control.
 
