@@ -29,7 +29,7 @@ It provides some quick commands to create FK and IK chains, it helps in rigging 
 ***
 
 ## Download and Install
-First, download the latest version of BigRig [here](https://github.com/RobertoM89/BigRig/releases/download/v0.99/BigRig_v0.99.zip), by clicking on the download button at the top right corner of the Google Drive page. After downloading the zipped folder, uncompress it wherever you want and move the inner content, i.e. *BigRig* folder, to Maya scripts folder. According to how you unzipped the folder, you may have two nested BigRig folders; make sure to move the inner one, which is the one containing the Python files.
+First, download the latest version of BigRig [here](https://github.com/RobertoM89/BigRig/releases/download/v0.99/BigRig_v0.99.zip). After downloading the zipped folder, uncompress it wherever you want and move the inner content, i.e. *BigRig* folder, to Maya scripts folder. According to how you unzipped the folder, you may have two nested BigRig folders; make sure to move the inner one, which is the one containing the Python files.
 
 You cand find Maya scripts folder here:  
 
