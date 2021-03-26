@@ -4,7 +4,7 @@ BigRig - Rig Tools for Autodesk Maya
 **Version 0.99**  
 **Compatibility: Maya 2019, 2020 - Python 2.7**
 
-The latest release of BigRig is available for **download [here](https://drive.google.com/file/d/1L5jbBtLgt2abzksyHfEDBehJq1qE-sI9/view?usp=sharing)**.
+The latest release of BigRig is available for **download [here](https://github.com/RobertoM89/BigRig/releases/download/v0.99/BigRig_v0.99.zip)**.
 
 **BigRig** is a small rigging tool for Autodesk Maya developed by *Roberto Menicatti*, with the contribution of *Eleonora Vanin* and *Riccardo Stincone*. It started as a school side-project at *BigRock Institute of Magic Technologies* and it's not meant to be an alternative to the other rigging plugins you may find on the web.  
 It provides some quick commands to create FK and IK chains, it helps in rigging characters' arms, hands and legs and provides useful functionalities to handle control curves, speeding up the process of mirroring, merging, replacing, grouping and coloring curves.
@@ -29,7 +29,7 @@ It provides some quick commands to create FK and IK chains, it helps in rigging 
 ***
 
 ## Download and Install
-First, download the latest version of BigRig [here](https://drive.google.com/file/d/1L5jbBtLgt2abzksyHfEDBehJq1qE-sI9/view?usp=sharing), by clicking on the download button at the top right corner of the Google Drive page. After downloading the zipped folder, uncompress it wherever you want and move the inner content, i.e. *BigRig* folder, to Maya scripts folder. According to how you unzipped the folder, you may have two nested BigRig folders; make sure to move the inner one, which is the one containing the Python files.
+First, download the latest version of BigRig [here](https://github.com/RobertoM89/BigRig/releases/download/v0.99/BigRig_v0.99.zip), by clicking on the download button at the top right corner of the Google Drive page. After downloading the zipped folder, uncompress it wherever you want and move the inner content, i.e. *BigRig* folder, to Maya scripts folder. According to how you unzipped the folder, you may have two nested BigRig folders; make sure to move the inner one, which is the one containing the Python files.
 
 You cand find Maya scripts folder here:  
 
