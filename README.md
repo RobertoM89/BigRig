@@ -319,7 +319,19 @@ E.g. if you have selected a joint named *Cheek_JNT*, after clicking on the desir
 and orientation of *Cheek_JNT*.
 
 
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;">Top</button>
 
 <script>
 //Get the button
