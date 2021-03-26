@@ -327,7 +327,7 @@ and orientation of *Cheek_JNT*.
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: red;
+  background-color: #2D7180;
   color: white;
   cursor: pointer;
   padding: 15px;
