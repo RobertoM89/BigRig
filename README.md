@@ -54,7 +54,7 @@ The **Help** menu consists of the following items:
 - *Help*: it shows a description for each BigRig command;
 - *Online Guide*: it opens the online official documentation, i.e. this page.
 
-![interface.jpg](https://robertom89.github.io/BigRig/images/interface.jpg "Interface" =300x)
+<img src="https://robertom89.github.io/BigRig/images/interface.jpg" alt="Interface" width="400"/>
 
 ***
 ## How to Rig Character Limbs with BigRig
@@ -72,7 +72,7 @@ Use again **Coplanar Joint Orient** script to orient the joints in the same way 
 Select **L_Toe_Roll_LOC**, and click on the **Mirror Curve** BigRig command after ticking *X* as mirroring axis. The script will create a new locator called **R_Toe_Roll_LOC** at the corresponding position of the right leg.
 Do the same for **L_Heel_Roll_LOC**.
 
-![leg_rig_01_low.jpg](https://robertom89.github.io/BigRig/images/leg_rig_01_low.jpg "Legs")
+<img src="https://robertom89.github.io/BigRig/images/leg_rig_01.jpg" alt="Legs" width="400"/>
 
 Before running the **Rig Leg** BigRig command, select the five joints of the left chain from hip to toe, insert a scale factor for the control shapes, select the leg side you want to rig and finally run the command. In order to know which scale factor to use, you can create a temporary Nurbs circle, match it with a joint and scale it until it reaches the desired size. Copy the scale value from the Channel Box, delete the circle you just created and paste the scale value inside BigRig.
 
@@ -91,7 +91,7 @@ Use **Coplanar Joint Orient** script to orient the joints by selecting X as the 
 Now select the first joint of the chain and mirror the chain onto the right arm: click on Maya menu *Skeleton → Mirror Joints (options)*, tick *YZ* and *Behavior* and click *Mirror*.  
 Use again **Coplanar Joint Orient** script to orient the joints in the same way you did for the left arm, orient the last joint as its parent and then freeze the rotations of the joints. 
 
-![arm_rig_01_low.jpg](https://robertom89.github.io/BigRig/images/arm_rig_01_low.jpg "Arms")
+<img src="https://robertom89.github.io/BigRig/images/arm_rig_01.jpg" alt="Arms" width="400"/>
 
 Before running the **Rig Arm** BigRig command, select the shoulder joint of the left chain, insert a scale factor for the control shapes, select the arm side you want to rig and finally run the command. In order to know which scale factor to use, you can create a temporary Nurbs circle, match it with a joint and scale it until it reaches the desired size. Copy the scale value from the Channel Box, delete the circle you just created and paste the scale value inside BigRig.
 
@@ -108,7 +108,7 @@ After executing the **Rig Arm** command for each arm, you can run the command **
 
 This command creates five joint chains parented to the wrist joint of the selected arm, named as in the following figure.
 
-![hand_joints_01_low.jpg](https://robertom89.github.io/BigRig/images/hand_joints_01_low.jpg "Hand Joints")
+<img src="https://robertom89.github.io/BigRig/images/hand_joints_01.jpg" alt="Hand Joints" width="200"/>
 
 Keep the finger *wrist* joints where they are, at the wrist joint position, place the *base*, *mid* and *tip* joints on the finger knuckles and the finger *NULL* joints at the tip of each finger.
 
@@ -116,7 +116,7 @@ Use **Coplanar Joint Orient** script on each finger to orient the joints from *b
 
 Rerun **Coplanar Joint Orient** on each finger for the finger *wrist* and the *base* joint. You don't want to include the finger *wrist* joint in the previous step, since it is not aligned with the real finger joints. 
 
-![hand_joints_02_low.jpg](https://robertom89.github.io/BigRig/images/hand_joints_02_low.jpg "Hand")
+<img src="https://robertom89.github.io/BigRig/images/hand_joints_02.jpg" alt="Hand" width="400"/>
 
 In order to mirror the finger joint chains, you need to unparent them temporarily. For each finger, select *L_<finger>_Wrist_JNT*, unparent it and mirror its chain onto the right hand: click on Maya menu *Skeleton → Mirror Joints (options)*, tick *YZ* and *Behavior* and click *Mirror*. 
 
@@ -132,7 +132,7 @@ If you want to change any of the control curves created by the script refer to *
 
 The behavior of each attribute is handled automatically via nodes, but the default values in the different MultiplyDivide nodes may not be suitable for the character mesh you are using. In order to tune these values you could open the node editor and look for each specific node, but this would be a tedious and prone to error task. Run BigRig command **Open Hand Tuner** to open a window showing all the multipliers for each required node, as displayed in figure.
 
-![hand_tuner_01_low.jpg](https://robertom89.github.io/BigRig/images/hand_tuner_01_low.jpg "Hand Tuner")
+<img src="https://robertom89.github.io/BigRig/images/hand_tuner_01.jpg" alt="Hand Tuner" width="600"/>
 
 When the hand is in its default pose, no attribute is active, so even if you changed any of the parameter in the *Hand Tuner* windows you wouldn't see any difference. Before starting to tune the different parameters, change the value of the hand attribute you want to tune in the Channel Box, in order to see how the pose is improved. 
 
