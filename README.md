@@ -322,7 +322,6 @@ and orientation of *Cheek_JNT*.
 <button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;
   width: 50px;
   height: 50px;
-  display: none;
   position: fixed;
   bottom: 20px;
   right: 30px;
@@ -338,8 +337,7 @@ and orientation of *Cheek_JNT*.
   color: white;
   cursor: pointer;
   padding: 15px;
-  border-radius: 100%;"
->Top</button>
+  border-radius: 100%;">Top</button>
 
 <script>
 //Get the button
