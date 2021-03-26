@@ -53,7 +53,7 @@ The **Help** menu consists of the following items:
 - *Changelog*: it shows what's new in every new version of BigRig;
 - *Help*: it shows a description for each BigRig command.
 
-![interface.jpg](https://bitbucket.org/repo/r95EAj7/images/2248949248-interface3.jpg "Interface")
+![Interface](/images/interface.jpg "Interface")
 
 ***
 ## How to Rig Character Limbs with BigRig
