@@ -44,6 +44,8 @@ You cand find Maya scripts folder here:
 
 Then, open **bigrig_shelf.py** with a text editor, copy the few lines of code you will find and paste them into Maya *Script Editor*. Click on *File → Save Script to Shelf...* to add BigRig to the active shelf. Finally, click on the new shelf button to run BigRig.
 
+Optionally, you can edit the shelf icon and use the **BigRigGUIIcon.svg** file that you can find inside the *icons* folder of BigRig folder.
+
 ***
 ## Interface
 BigRig interface is shown in the following figure. The window is dockable anywhere within Maya interface.  
