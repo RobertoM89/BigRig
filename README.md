@@ -187,6 +187,9 @@ Select the arm, insert a scale value for the control shapes and run the command.
 An FK and an IK chains are created, each one with its own controls, while the original chain becomes the Skin chain.  
 A control for the hand is created with a switch attribute to change the behavior of the Skin chain.
 
+- **Rig Arm and Mirror**
+This function creates the rig for the selected arm, mirrors the joints and create a rig for the opposite arm.
+
 - **Create Shoulder Twist**  
 This function adds shoulder twist joints to the selected arm.
 
@@ -203,6 +206,9 @@ Keep the "finger_Wrist" joints placed at Wrist Joint position.
 This function adds the controls for each finger and the attributes for curl, spread and cup to the hand control.  
 The control for the hand (named L_Hand_CTRL) must already exist.  
 Run *Rig Arm* if you haven't already, so that the hand control is created. Then orient the finger joints keeping the Z axis as turn axis and the Y axis pointing towards the inner side of the curl. Finally run this command.
+
+- **Rig Hand and Mirror**
+This function creates the rig for the selected hand, mirrors the joints and create a rig for the opposite hand.
 
 - **Open Hand Tuner**  
 This function opens a window that allows you to tune the multipliers values of each hand attribute without looking for the corresponding multiplyDivide node in the node editor. It only works if you rigged the hands with the command *Rig Hand*.    
@@ -221,6 +227,9 @@ Select the five joints from hip to toe, insert a scale factor for the control sh
 The ikHandles for the ankle, the foot and the toe are created and grouped correctly. A control shape for the foot is created and the attributes for toe/heel lift/roll are added.  
 The pole vector constraint for the knee is also created, with a no-flip knee solution.  
 On Maya 2020 an attribute is added to control the knee twist via channelbox too.
+
+- **Rig Leg and Mirror**
+This function creates the rig for the selected leg, mirrors the joints and create a rig for the opposite leg.
 
 ### Control Commands
 
