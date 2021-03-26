@@ -319,8 +319,7 @@ E.g. if you have selected a joint named *Cheek_JNT*, after clicking on the desir
 and orientation of *Cheek_JNT*.
 
 
-<button onclick="topFunction()" id="myBtn" title="Go to top" 
-style="display: none;
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: none;
   width: 50px;
   height: 50px;
   display: none;
