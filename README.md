@@ -4,32 +4,32 @@ BigRig - Rig Tools for Autodesk Maya
 **Version 0.99**  
 **Compatibility: Maya 2019, 2020 - Python 2.7**
 
-The latest release of BigRig is available for **download [here](https://github.com/RobertoM89/BigRig/releases/download/v0.99/BigRig_v0.99.zip)**.
+The latest release of BigRig is available for **download [here](https://drive.google.com/file/d/1L5jbBtLgt2abzksyHfEDBehJq1qE-sI9/view?usp=sharing)**.
 
 **BigRig** is a small rigging tool for Autodesk Maya developed by *Roberto Menicatti*, with the contribution of *Eleonora Vanin* and *Riccardo Stincone*. It started as a school side-project at *BigRock Institute of Magic Technologies* and it's not meant to be an alternative to the other rigging plugins you may find on the web.  
 It provides some quick commands to create FK and IK chains, it helps in rigging characters' arms, hands and legs and provides useful functionalities to handle control curves, speeding up the process of mirroring, merging, replacing, grouping and coloring curves.
 
 ***
 
-- [Download and Install](download-and-install)
-- [Interface](interface)
-- [How to Rig Character Limbs with BigRig](how-to-rig-character-limbs-with-bigrig)
-    - [Rigging the Legs](rigging-the-legs)
-    - [Rigging the Arms](rigging-the-arms)
-    - [Rigging the Hands](rigging-the-hands)
-    - [Replacing a Control Curve](replacing-a-control-curve)
-- [Commands](commands)
-    - [Generic Commands](generic-commands)
-    - [Arm Rig](arm-rig)
-    - [Hand Rig](hand-rig)
-    - [Leg Rig](leg-rig)
-    - [Control Commands](control-commands)
-    - [Shapes](shapes)
+- [Download and Install](#download-and-install)
+- [Interface](#interface)
+- [How to Rig Character Limbs with BigRig](#how-to-rig-character-limbs-with-bigrig)
+    - [Rigging the Legs](#rigging-the-legs)
+    - [Rigging the Arms](#rigging-the-arms)
+    - [Rigging the Hands](#rigging-the-hands)
+    - [Replacing a Control Curve](#replacing-a-control-curve)
+- [Commands](#commands)
+    - [Generic Commands](#generic-commands)
+    - [Arm Rig](#arm-rig)
+    - [Hand Rig](#hand-rig)
+    - [Leg Rig](#leg-rig)
+    - [Control Commands](#control-commands)
+    - [Shapes](#shapes)
 
 ***
 
 ## Download and Install
-First, download the latest version of BigRig [here](https://github.com/RobertoM89/BigRig/releases/download/v0.99/BigRig_v0.99.zip), by clicking on the download button at the top right corner of the Google Drive page. After downloading the zipped folder, uncompress it wherever you want and move the inner content, i.e. *BigRig* folder, to Maya scripts folder. According to how you unzipped the folder, you may have two nested BigRig folders; make sure to move the inner one, which is the one containing the Python files.
+First, download the latest version of BigRig [here](https://drive.google.com/file/d/1L5jbBtLgt2abzksyHfEDBehJq1qE-sI9/view?usp=sharing), by clicking on the download button at the top right corner of the Google Drive page. After downloading the zipped folder, uncompress it wherever you want and move the inner content, i.e. *BigRig* folder, to Maya scripts folder. According to how you unzipped the folder, you may have two nested BigRig folders; make sure to move the inner one, which is the one containing the Python files.
 
 You cand find Maya scripts folder here:  
 
@@ -81,7 +81,7 @@ Both legs are now rigged with FK and IK controls, which can be switched from the
 
 If the command is run on Maya 2020, the knee twist can be controlled from the **Knee Twist** attribute of the foot control in the Channel Box. You can turn off the visibility of the knee control shape from the foot control.
 
-If you want to change any of the control curves created by the script refer to **[Replacing a Control Curve](replacing-a-control-curve)** Section.
+If you want to change any of the control curves created by the script refer to **[Replacing a Control Curve](#replacing-a-control-curve)** Section.
  
 ### Rigging the Arms
 Start creating a joint chain by placing the *shoulder, elbow* and *wrist* joints on the character's left arm. You don't need to rename them, as they will be automatically renamed by the script.  
@@ -100,7 +100,7 @@ Both arms are now rigged with FK and IK controls, which can be switched from the
 
 Run the commands **Create Shoulder Twist** and **Create Elbow Twist** if you want to add twist joints to the upper arm and the forearm.
 
-If you want to change any of the control curves created by the script refer to **[Replacing a Control Curve](replacing-a-control-curve)** Section.
+If you want to change any of the control curves created by the script refer to **[Replacing a Control Curve](#replacing-a-control-curve)** Section.
 
 ### Rigging the Hands
 After executing the **Rig Arm** command for each arm, you can run the command **Create Hand Joints** by selecting left side on BigRig.
@@ -127,7 +127,7 @@ Now run **Rig Hand** command for each side after inserting a scale factor for th
 
 The control of each hand, *L_Hand_CTRL* and *R_Hand_CTRL*, is now enriched with attributes to control the *curl*, the *spread*, the *backward fan*, the *forward fan*, the *palm cup* a the *palm spread* of the hand as well as the curl and the spread of each individual finger. Control curves are also created for each finger knuckle joint and their visibility can be toggled from an attribute in the hand control.
 
-If you want to change any of the control curves created by the script refer to **[Replacing a Control Curve](replacing-a-control-curve)** Section.
+If you want to change any of the control curves created by the script refer to **[Replacing a Control Curve](#replacing-a-control-curve)** Section.
 
 The behavior of each attribute is handled automatically via nodes, but the default values in the different MultiplyDivide nodes may not be suitable for the character mesh you are using. In order to tune these values you could open the node editor and look for each specific node, but this would be a tedious and prone to error task. Run BigRig command **Open Hand Tuner** to open a window showing all the multipliers for each required node, as displayed in figure.
 
