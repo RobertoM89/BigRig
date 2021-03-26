@@ -91,7 +91,7 @@ Use **Coplanar Joint Orient** script to orient the joints by selecting X as the 
 Now select the first joint of the chain and mirror the chain onto the right arm: click on Maya menu *Skeleton → Mirror Joints (options)*, tick *YZ* and *Behavior* and click *Mirror*.  
 Use again **Coplanar Joint Orient** script to orient the joints in the same way you did for the left arm, orient the last joint as its parent and then freeze the rotations of the joints. 
 
-<img src="https://robertom89.github.io/BigRig/images/arm_rig_01.jpg" alt="Arms" width="400"/>
+<img src="https://robertom89.github.io/BigRig/images/arm_rig_01.jpg" alt="Arms" width="600"/>
 
 Before running the **Rig Arm** BigRig command, select the shoulder joint of the left chain, insert a scale factor for the control shapes, select the arm side you want to rig and finally run the command. In order to know which scale factor to use, you can create a temporary Nurbs circle, match it with a joint and scale it until it reaches the desired size. Copy the scale value from the Channel Box, delete the circle you just created and paste the scale value inside BigRig.
 
@@ -132,7 +132,7 @@ If you want to change any of the control curves created by the script refer to *
 
 The behavior of each attribute is handled automatically via nodes, but the default values in the different MultiplyDivide nodes may not be suitable for the character mesh you are using. In order to tune these values you could open the node editor and look for each specific node, but this would be a tedious and prone to error task. Run BigRig command **Open Hand Tuner** to open a window showing all the multipliers for each required node, as displayed in figure.
 
-<img src="https://robertom89.github.io/BigRig/images/hand_tuner_01.jpg" alt="Hand Tuner" width="600"/>
+<img src="https://robertom89.github.io/BigRig/images/hand_tuner_01.jpg" alt="Hand Tuner" width="800"/>
 
 When the hand is in its default pose, no attribute is active, so even if you changed any of the parameter in the *Hand Tuner* windows you wouldn't see any difference. Before starting to tune the different parameters, change the value of the hand attribute you want to tune in the Channel Box, in order to see how the pose is improved. 
 
