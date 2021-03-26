@@ -158,8 +158,8 @@ The behavior of each attribute is handled automatically via nodes, but the defau
 When the hand is in its default pose, no attribute is active, so even if you changed any of the parameter in the *Hand Tuner* windows you wouldn't see any difference. Before starting to tune the different parameters, change the value of the hand attribute you want to tune in the Channel Box, in order to see how the pose is improved. 
 
 In order to change a parameter you can either:
-- type the new value and press *Enter* to save it;
-- press *Ctrl* and drag on the value to change it and save it at the same time while dragging;
+- type the new value and press <code>Enter</code> to save it;
+- press <code>Ctrl</code> and drag on the value to change it and save it at the same time while dragging;
 - or just type the value and then click on the **Save** button.
 
 If you want to copy the values entered for one side to the other side, click on the *Mirror values Left to Right* or *Mirror values Right to Left* accordingly. Only the values of the active tab are copied. Signs are reversed automatically where necessary.
@@ -171,7 +171,7 @@ If you want to reset the parameters to their default values, click on the *Reset
 If you want to change one of the control curves created by the script:
 - create the new curve at the origin of Maya world;
 - select the curve you just created;
-- select the curve you want to replace;
+- press <code>Ctrl</code> (Windows) or <code>Cmd</code> (macOS) and select the curve you want to replace, to add it to current selection;
 - click on BigRig **Replace Curve** command.
 
 If you want to replace the corresponding curve on the other side of the rig too:
@@ -179,7 +179,7 @@ If you want to replace the corresponding curve on the other side of the rig too:
 - click on BigRig **Mirror Curve** command after ticking X as mirroring axis;
 - select the mirrored curve just created;
 - freeze the rotations if necessary (it is required if the controls on the two sides have the same orientation, i.e. leg controls);
-- select the curve you want to replace;
+- press <code>Ctrl</code> (Windows) or <code>Cmd</code> (macOS) and select the curve you want to replace, to add it to current selection;
 - click on BigRig **Replace Curve** command.
 
 ***
@@ -233,7 +233,7 @@ This function creates the rig for the selected hand, mirrors the joints and crea
 
 - **Open Hand Tuner**  
 This function opens a window that allows you to tune the multipliers values of each hand attribute without looking for the corresponding multiplyDivide node in the node editor. It only works if you rigged the hands with the command *Rig Hand*.    
-Press *Ctrl* and drag with the middle mouse button to increase or decrease the values.  
+Press <code>Ctrl</code> and drag with the middle mouse button to increase or decrease the values.  
 Once the values are set, click on the *Save* button.  
 Click *Reset* if you want to reset the multipliers of the active tab to their default values.  
 Click *Mirror values Left to Right* or *Mirror values Right to Left*, if you want to copy the values entered for one side to the other side on the active tab. Signs are reversed automatically where necessary.
