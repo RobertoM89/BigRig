@@ -66,7 +66,7 @@ In order to orient the joints correctly we suggest the use of **[Coplanar Joint 
 
 ### Rigging the Legs
 Start creating a joint chain by placing the *hip, knee, ankle, foot* and *toe* joints on the character's left or right leg. You don't need to rename them, as they will be automatically renamed by the script.  
-Use **Coplanar Joint Orient** script to orient the joints by selecting X as the aim axis, Z axis as the turning axis and so that the Y axis of the foot joint is directed upwards, as Maya world Y axis. Orient the toe joint as its parent joint: click on Maya menu *Skeleton → Orient Joint (options)*, tick *Orient Joint to World* and click *Orient*. Then freeze the rotations of the joints.  
+Use **Coplanar Joint Orient** script to orient the joints by selecting X as the aim axis, Z as the turning axis and make sure that the Y axis of the foot joint is directed upwards, as Maya world Y axis. Orient the toe joint as its parent joint: click on Maya menu *Skeleton → Orient Joint (options)*, tick *Orient Joint to World* and click *Orient*. Then freeze the rotations of the joints.  
 Create two locators, called **L_Toe_Roll_LOC** and **L_Heel_Roll_LOC** (replace **L_** with **R_** if you choose to start with the right leg) and place them where you want the rotation pivots for toe roll and heel roll to be.  
 
 <!-- Now select the first joint of the chain and mirror the chain onto the right leg: click on Maya menu *Skeleton → Mirror Joints (options)*, tick *YZ* and *Behavior* and click *Mirror*.  
@@ -78,7 +78,7 @@ Do the same for **L_Heel_Roll_LOC**. -->
 
 Then:
 - select the five joints of the chain from hip to toe;
-- on the left side of BigRig command **Rig Leg** insert a scale factor for the control shapes;
+- on the left side of **Rig Leg** BigRig command insert a scale factor for the control shapes;
 - select the leg side according to where you placed the joint chain;
 - finally run one of the two BigRig commands **Rig Leg** or **Rig Leg and Mirror**. Run the first one if you need to rig one leg only, run the second one to rig both legs without the need to mirror anything manually. 
 
@@ -94,7 +94,7 @@ If you want to change any of the control curves created by the script refer to *
  
 ### Rigging the Arms
 Start creating a joint chain by placing the *shoulder, elbow* and *wrist* joints on the character's left arm. You don't need to rename them, as they will be automatically renamed by the script.  
-Use **Coplanar Joint Orient** script to orient the joints by selecting X as the aim axis, Z axis as the turning axis and so that the Y axis of the joints is pointing towards the inner side of the arm bend. Orient the wrist joint as its parent joint: click on Maya menu *Skeleton → Orient Joint (options)*, tick *Orient Joint to World* and click *Orient*. Then freeze the rotations of the joints.  
+Use **Coplanar Joint Orient** script to orient the joints by selecting X as the aim axis, Z as the turning axis and make sure that the Y axis of the joints is pointing towards the inner side of the arm bend. Orient the wrist joint as its parent joint: click on Maya menu *Skeleton → Orient Joint (options)*, tick *Orient Joint to World* and click *Orient*. Then freeze the rotations of the joints.  
 
 <!-- Now select the first joint of the chain and mirror the chain onto the right arm: click on Maya menu *Skeleton → Mirror Joints (options)*, tick *YZ* and *Behavior* and click *Mirror*.  
 Use again **Coplanar Joint Orient** script to orient the joints in the same way you did for the left arm, orient the last joint as its parent and then freeze the rotations of the joints.  -->
@@ -103,7 +103,7 @@ Use again **Coplanar Joint Orient** script to orient the joints in the same way 
 
 Then:
 - select the shoulder joint of the chain you just created;
-- on the left side of BigRig command **Rig Arm** insert a scale factor for the control shapes;
+- on the left side of **Rig Arm** BigRig command insert a scale factor for the control shapes;
 - select the arm side according to where you placed the joint chain;
 - finally run one of the two BigRig commands **Rig Arm** or **Rig Arm and Mirror**. Run the first one if you need to rig one arm only, run the second one to rig both arms without the need to mirror anything manually. 
 
@@ -126,7 +126,7 @@ This command creates five joint chains parented to the wrist joint of the select
 
 Keep the finger *wrist* joints where they are, at the wrist joint position, place the *base*, *mid* and *tip* joints on the finger knuckles and the finger *NULL* joints at the tip of each finger.
 
-Use **Coplanar Joint Orient** script on each finger to orient the joints from *base* to *NULL* by selecting X as the aim axis, Z axis as the turning axis and so that the Y axis of the joints is pointing towards the inner side of the finger bend. Orient the finger *NULL* joint as its parent joint: click on Maya menu *Skeleton → Orient Joint (options)*, tick *Orient Joint to World* and click *Orient*. Then freeze the rotations of the joints.  
+Use **Coplanar Joint Orient** script on each finger to orient the joints from *base* to *NULL* by selecting X as the aim axis, Z as the turning axis and make sure that the Y axis of the joints is pointing towards the inner side of the finger bend. Orient the finger *NULL* joint as its parent joint: click on Maya menu *Skeleton → Orient Joint (options)*, tick *Orient Joint to World* and click *Orient*. Then freeze the rotations of the joints.  
 
 Rerun **Coplanar Joint Orient** on each finger for the finger *wrist* and the *base* joint. You don't want to include the finger *wrist* joint in the previous step, since it is not aligned with the real finger joints. 
 
@@ -139,7 +139,7 @@ Use again **Coplanar Joint Orient** script to orient the hand joints in the same
 Parent again each *L_<finger>_Wrist_JNT* and *R_<finger>_Wrist_JNT* to the corresponding wrist joint. -->
 
 Then:
-- on the left side of BigRig command **Rig Hand** insert a scale factor for the control shapes;
+- on the left side of **Rig Hand** BigRig command insert a scale factor for the control shapes;
 - select the hand side according to where you placed the joint chains;
 - finally run one of the two BigRig commands **Rig Hand** or **Rig Hand and Mirror**. Run the first one if you need to rig one hand only, run the second one to rig both hands without the need to mirror anything manually. 
 
