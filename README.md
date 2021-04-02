@@ -33,7 +33,7 @@ The script provides some quick commands to create FK and IK chains, it helps in 
 ***
 
 ## Quick Guide
-To rig the limbs of your character, place and orient 5 joints on the left leg mesh and 3 joints on the left arm mesh as in the following figures. then freeze their rotations.
+To rig the limbs of your character, place and orient 5 joints on the left leg mesh and 3 joints on the left arm mesh as in the following figures, then freeze their rotations.
 
 <div class="row">
   <div class="column">
