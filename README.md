@@ -1,16 +1,20 @@
 BigRig - Rig Tools for Autodesk Maya
 ======================================
 ***
-**Version 0.99 UPDATE HERE**  
+**Version 1.0**  
+**March 2021**
+
 **Compatibility: Maya 2019, 2020 - Python 2.7**
 
-The latest release of BigRig is available for **download [here (UPDATE LINK)](https://github.com/RobertoM89/BigRig/releases/download/v0.99/BigRig_v0.99.zip)**.
+The latest release of BigRig is available for **download [here](https://github.com/RobertoM89/BigRig/releases/download/v1.0/BigRig_v1.0.zip)**.
 
-**BigRig** is a small rigging tool for Autodesk Maya developed by *[Roberto Menicatti](https://robertomenicatti.carrd.co/)*, with the contribution of *Eleonora Vanin* and *Riccardo Stincone*. It started as a school side-project at *BigRock Institute of Magic Technologies* and it's not meant to be an alternative to the other rigging plugins you may find on the web.  
-It provides some quick commands to create FK and IK chains, it helps in rigging characters' arms, hands and legs and provides useful functionalities to handle control curves, speeding up the process of mirroring, merging, replacing, grouping and coloring curves.
+**BigRig** is a small rigging tool for Autodesk Maya developed by *[Roberto Menicatti](https://robertomenicatti.carrd.co/)*, with the contribution of *Eleonora Vanin* and *Riccardo Stincone*. It started as a school side-project at *BigRock Institute of Magic Technologies* and it's not meant to be an alternative to the other rigging plugins you may find on the web. At the moment, further development is not planned to happen on a regular basis.
+
+The script provides some quick commands to create FK and IK chains, it helps in rigging characters' arms, hands and legs and provides useful functionalities to handle control curves, speeding up the process of mirroring, merging, replacing, grouping and coloring curves.
 
 ***
 
+- [Quick Guide](https://robertom89.github.io/BigRig/#quick-guide)
 - [Download and Install](https://robertom89.github.io/BigRig/#download-and-install)
 - [Interface](https://robertom89.github.io/BigRig/#interface)
 - [How to Rig Character Limbs with BigRig](https://robertom89.github.io/BigRig/#how-to-rig-character-limbs-with-bigrig)
@@ -28,8 +32,44 @@ It provides some quick commands to create FK and IK chains, it helps in rigging 
 
 ***
 
+## Quick Guide
+To rig the limbs of your character, place and orient 5 joints on the left leg mesh and 3 joints on the left arm mesh as in the following figures. then freeze their rotations.
+
+<div class="row">
+  <div class="column">
+    <img src="https://robertom89.github.io/BigRig/images/leg_rig_02.jpg" alt="Legs" width="80%"/>
+    <figcaption>Fig.1 - Leg joints</figcaption>
+  </div>
+  <div class="column">
+    <img src="https://robertom89.github.io/BigRig/images/arm_rig_02.jpg" alt="Arms" width="100%"/>
+    <figcaption>Fig.2 - Arm joints</figcaption>
+  </div>
+</div>
+
+Add two locators, called **L_Toe_Roll_LOC** and **L_Heel_Roll_LOC** where you want the rotation pivots for toe roll and heel roll to be.  
+
+Select the 5 leg joints and run **Rig Leg and Mirror** to mirror the left leg joints onto the right one, rename all of them, and rig both legs with FK and IK controls.
+
+Select the shoulder joint and run **Rig Arm and Mirror** to mirror the left arm joints onto the right one, rename all of them, and rig both arms with FK and IK controls.
+
+Run **Create Hand Joints** for the left side, then position and orient the newly created finger joints as in figure and freeze their rotations.
+
+<img src="https://robertom89.github.io/BigRig/images/hand_joints_02.jpg" alt="Hand" width="300"/>
+<figcaption>Fig.3 - Hand joints</figcaption>
+
+Run **Rig Hand and Mirror** to mirror the left hand joints onto the right one, rename all of them, and rig both hands with spread, cup, fan and curl controls and attributes.
+
+In all of the above cases, insert a scale factor for the control shapes and tick the side where you placed the joints before running the relative commands.
+
+Run **Create Shoulder Twist** and **Create Elbow Twist** on both arms if you want to add twist.
+
+Use the command **Replace Curve** and **Color Selected Controls** to customize the controls created by the script.
+
+On the menu bar, click on *Help → Help* to read a description of each command directly from BigRig interface, or *Help  → Online Guide* to be redirected to this page.
+Read the following Sections to have a better understanding of each and every step and function.
+
 ## Download and Install
-First, download the latest version of BigRig [here (UPDATE LINK)](https://github.com/RobertoM89/BigRig/releases/download/v0.99/BigRig_v0.99.zip). After downloading the zipped folder, uncompress it wherever you want and move the inner content, i.e. *BigRig* folder, to Maya scripts folder. According to how you unzipped the folder, you may have two nested BigRig folders; make sure to move the inner one, which is the one containing the Python files.
+First, download the latest version of BigRig [here](https://github.com/RobertoM89/BigRig/releases/download/v1.0/BigRig_v1.0.zip). After downloading the zipped folder, uncompress it wherever you want and move the inner content, i.e. *BigRig* folder, to Maya scripts folder. According to how you unzipped the folder, you may have two nested BigRig folders; make sure to move the inner one, which is the one containing the Python files.
 
 You cand find Maya scripts folder here:  
 
@@ -67,14 +107,12 @@ In order to orient the joints correctly we suggest the use of **[Coplanar Joint 
 ### Rigging the Legs
 Start creating a joint chain by placing the *hip, knee, ankle, foot* and *toe* joints on the character's left or right leg. You don't need to rename them, as they will be automatically renamed by the script.  
 Use **Coplanar Joint Orient** script to orient the joints by selecting X as the aim axis, Z as the turning axis and make sure that the Y axis of the foot joint is directed upwards, as Maya world Y axis. Orient the toe joint as its parent joint: click on Maya menu *Skeleton → Orient Joint (options)*, tick *Orient Joint to World* and click *Orient*. Then freeze the rotations of the joints.  
-Create two locators, called **L_Toe_Roll_LOC** and **L_Heel_Roll_LOC** (replace **L_** with **R_** if you choose to start with the right leg) and place them where you want the rotation pivots for toe roll and heel roll to be.  
+Create two locators, called **L_Toe_Roll_LOC** and **L_Heel_Roll_LOC** (replace **L_** with **R_** if you choose to start with the right leg) and place them where you want the rotation pivots for toe roll and heel roll to be (refer to *Fig. 1*).  
 
 <!-- Now select the first joint of the chain and mirror the chain onto the right leg: click on Maya menu *Skeleton → Mirror Joints (options)*, tick *YZ* and *Behavior* and click *Mirror*.  
 Use again **Coplanar Joint Orient** script to orient the joints in the same way you did for the left leg, orient the last joint as its parent and then freeze the rotations of the joints.  
 Select **L_Toe_Roll_LOC**, and click on the **Mirror Curve** BigRig command after ticking *X* as mirroring axis. The script will create a new locator called **R_Toe_Roll_LOC** at the corresponding position of the right leg.
 Do the same for **L_Heel_Roll_LOC**. -->
-
-<img src="https://robertom89.github.io/BigRig/images/leg_rig_02.jpg" alt="Legs" width="400"/>
 
 Then:
 - select the five joints of the chain from hip to toe;
@@ -94,12 +132,10 @@ If you want to change any of the control curves created by the script refer to *
  
 ### Rigging the Arms
 Start creating a joint chain by placing the *shoulder, elbow* and *wrist* joints on the character's left arm. You don't need to rename them, as they will be automatically renamed by the script.  
-Use **Coplanar Joint Orient** script to orient the joints by selecting X as the aim axis, Z as the turning axis and make sure that the Y axis of the joints is pointing towards the inner side of the arm bend. Orient the wrist joint as its parent joint: click on Maya menu *Skeleton → Orient Joint (options)*, tick *Orient Joint to World* and click *Orient*. Then freeze the rotations of the joints.  
+Use **Coplanar Joint Orient** script to orient the joints by selecting X as the aim axis, Z as the turning axis and make sure that the Y axis of the joints is pointing towards the inner side of the arm bend. Orient the wrist joint as its parent joint: click on Maya menu *Skeleton → Orient Joint (options)*, tick *Orient Joint to World* and click *Orient* (refer to *Fig. 2*).  . Then freeze the rotations of the joints.  
 
 <!-- Now select the first joint of the chain and mirror the chain onto the right arm: click on Maya menu *Skeleton → Mirror Joints (options)*, tick *YZ* and *Behavior* and click *Mirror*.  
 Use again **Coplanar Joint Orient** script to orient the joints in the same way you did for the left arm, orient the last joint as its parent and then freeze the rotations of the joints.  -->
-
-<img src="https://robertom89.github.io/BigRig/images/arm_rig_02.jpg" alt="Arms" width="600"/>
 
 Then:
 - select the shoulder joint of the chain you just created;
@@ -128,9 +164,7 @@ Keep the finger *wrist* joints where they are, at the wrist joint position, plac
 
 Use **Coplanar Joint Orient** script on each finger to orient the joints from *base* to *NULL* by selecting X as the aim axis, Z as the turning axis and make sure that the Y axis of the joints is pointing towards the inner side of the finger bend. Orient the finger *NULL* joint as its parent joint: click on Maya menu *Skeleton → Orient Joint (options)*, tick *Orient Joint to World* and click *Orient*. Then freeze the rotations of the joints.  
 
-Rerun **Coplanar Joint Orient** on each finger for the finger *wrist* and the *base* joint. You don't want to include the finger *wrist* joint in the previous step, since it is not aligned with the real finger joints. 
-
-<img src="https://robertom89.github.io/BigRig/images/hand_joints_02.jpg" alt="Hand" width="400"/>
+Rerun **Coplanar Joint Orient** on each finger for the finger *wrist* and the *base* joint. You don't want to include the finger *wrist* joint in the previous step, since it is not aligned with the real finger joints. (Refer to *Fig. 3*).  
 
 <!-- In order to mirror the finger joint chains, you need to unparent them temporarily. For each finger, select *L_<finger>_Wrist_JNT*, unparent it and mirror its chain onto the right hand: click on Maya menu *Skeleton → Mirror Joints (options)*, tick *YZ* and *Behavior* and click *Mirror*. 
 
@@ -360,3 +394,22 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 </script>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
