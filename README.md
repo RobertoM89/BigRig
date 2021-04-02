@@ -10,7 +10,7 @@ The latest release of BigRig is available for **download [here](https://github.c
 
 **BigRig** is a small rigging tool for Autodesk Maya developed by *[Roberto Menicatti](https://robertomenicatti.carrd.co/)*, with the contribution of *Eleonora Vanin* and *Riccardo Stincone*. It started as a school side-project at *BigRock Institute of Magic Technologies* and it's not meant to be an alternative to the other rigging plugins you may find on the web. At the moment, further development is not planned to happen on a regular basis.
 
-The script provides some quick commands to create FK and IK chains, it helps in rigging characters' arms, hands and legs and provides useful functionalities to handle control curves, speeding up the process of mirroring, merging, replacing, grouping and coloring curves.
+The script provides some quick commands to create FK and IK chains, it helps in rigging characters' arms, hands and legs and provides useful functionalities to rename nodes and handle control curves, speeding up the process of mirroring, merging, replacing, grouping and coloring curves.
 
 ***
 
@@ -61,6 +61,8 @@ Run **Rig Hand and Mirror** to mirror the left hand joints onto the right one, r
 
 In all of the above cases, insert a scale factor for the control shapes and tick the side where you placed the joints before running the relative commands.
 
+Run **Open Hand Tuner** if you want to tune the "weights" of the hand spread, cup, fan and curl.
+
 Run **Create Shoulder Twist** and **Create Elbow Twist** on both arms if you want to add twist.
 
 Use the command **Replace Curve** and **Color Selected Controls** to customize the controls created by the script.
@@ -91,10 +93,10 @@ Optionally, you can edit the shelf icon and use the **BigRigGUIIcon.svg** file t
 BigRig interface is shown in the following figure. The window is dockable anywhere within Maya interface.  
 The **Help** menu consists of the following items:
 
-- *About*: it shows version and authors information;
-- *Changelog*: it shows what's new in every new version of BigRig;
-- *Help*: it shows a description for each BigRig command;
-- *Online Guide*: it opens the online official documentation, i.e. this page.
+- *About:* it shows version and authors information;
+- *Changelog:* it shows what's new in every new version of BigRig;
+- *Help:* it shows a description for each BigRig command;
+- *Online Guide:* it opens the online official documentation, i.e. this page.
 
 <img src="https://robertom89.github.io/BigRig/images/interface.jpg" alt="Interface" width="400"/>
 
@@ -132,7 +134,7 @@ If you want to change any of the control curves created by the script refer to *
  
 ### Rigging the Arms
 Start creating a joint chain by placing the *shoulder, elbow* and *wrist* joints on the character's left arm. You don't need to rename them, as they will be automatically renamed by the script.  
-Use **Coplanar Joint Orient** script to orient the joints by selecting X as the aim axis, Z as the turning axis and make sure that the Y axis of the joints is pointing towards the inner side of the arm bend. Orient the wrist joint as its parent joint: click on Maya menu *Skeleton → Orient Joint (options)*, tick *Orient Joint to World* and click *Orient* (refer to *Fig. 2*).  . Then freeze the rotations of the joints.  
+Use **Coplanar Joint Orient** script to orient the joints by selecting X as the aim axis, Z as the turning axis and make sure that the Y axis of the joints is pointing towards the inner side of the arm bend. Orient the wrist joint as its parent joint: click on Maya menu *Skeleton → Orient Joint (options)*, tick *Orient Joint to World* and click *Orient* (refer to *Fig. 2*). Then freeze the rotations of the joints.  
 
 <!-- Now select the first joint of the chain and mirror the chain onto the right arm: click on Maya menu *Skeleton → Mirror Joints (options)*, tick *YZ* and *Behavior* and click *Mirror*.  
 Use again **Coplanar Joint Orient** script to orient the joints in the same way you did for the left arm, orient the last joint as its parent and then freeze the rotations of the joints.  -->
@@ -189,7 +191,7 @@ The behavior of each attribute is handled automatically via nodes, but the defau
 
 <img src="https://robertom89.github.io/BigRig/images/hand_tuner_01.jpg" alt="Hand Tuner" width="800"/>
 
-When the hand is in its default pose, no attribute is active, so even if you changed any of the parameter in the *Hand Tuner* windows you wouldn't see any difference. Before starting to tune the different parameters, change the value of the hand attribute you want to tune in the Channel Box, in order to see how the pose is improved. 
+When the hand is in its default pose, no attribute is active, so even if you changed any of the parameter in the *Hand Tuner* window you wouldn't see any difference. Before starting to tune the different parameters, change the value of the hand attribute you want to tune in the Channel Box, in order to see how the pose is improved. 
 
 In order to change a parameter you can either:
 - type the new value and press <code>Enter</code> to save it;
@@ -212,7 +214,7 @@ If you want to replace the corresponding curve on the other side of the rig too:
 - select the control curve you want to mirror;
 - click on BigRig **Mirror Curve** command after ticking X as mirroring axis;
 - select the mirrored curve just created;
-- freeze the rotations if necessary (it is required if the controls on the two sides have the same orientation, i.e. leg controls);
+- freeze the rotations if necessary (it is required if the controls on the two sides have the same orientation, e.g. leg controls);
 - press <code>Ctrl</code> (Windows) or <code>Cmd</code> (macOS) and select the curve you want to replace, to add it to current selection;
 - click on BigRig **Replace Curve** command.
 
@@ -258,7 +260,7 @@ This function creates five joint chains parented to the wrist joint of the selec
 Keep the "finger_Wrist" joints placed at Wrist Joint position.
 
 - **Rig Hand**  
-This function adds the controls for each finger and the attributes for curl, spread and cup to the hand control.  
+This function adds the controls for each finger and the attributes for curl, fan, spread and cup to the hand control.  
 The control for the hand (named L_Hand_CTRL) must already exist.  
 Run *Rig Arm* if you haven't already, so that the hand control is created. Then orient the finger joints keeping the Z axis as turn axis and the Y axis pointing towards the inner side of the curl. Finally run this command.
 
