@@ -1,12 +1,12 @@
 BigRig - Rig Tools for Autodesk Maya
 ======================================
 ***
-**Version 1.1**  
+**Version 1.2**  
 **May 2021**
 
 **Compatibility: Maya 2019, 2020 - Python 2.7**
 
-The latest release of BigRig is available for **download [here](https://github.com/RobertoM89/BigRig/releases/download/v1.1/BigRig_v1.1.zip)**.
+The latest release of BigRig is available for **download [here](https://github.com/RobertoM89/BigRig/releases/download/v1.2/BigRig_v1.2.zip)**.
 
 **BigRig** is a small rigging tool for Autodesk Maya developed by *[Roberto Menicatti](https://robertomenicatti.carrd.co/)*, with the contribution of *Eleonora Vanin* and *Riccardo Stincone*. It started as a school side-project at *BigRock Institute of Magic Technologies* and it's not meant to be an alternative to the other rigging plugins you may find on the web. At the moment, further development is not planned to happen on a regular basis.
 
@@ -71,7 +71,7 @@ On the menu bar, click on *Help → Help* to read a description of each command 
 Read the following Sections to have a better understanding of each and every step and function.
 
 ## Download and Install
-First, download the latest version of BigRig [here](https://github.com/RobertoM89/BigRig/releases/download/v1.1/BigRig_v1.1.zip). After downloading the zipped folder, uncompress it wherever you want and move the inner content, i.e. *BigRig* folder, to Maya scripts folder. According to how you unzipped the folder, you may have two nested BigRig folders; make sure to move the inner one, which is the one containing the Python files.
+First, download the latest version of BigRig [here](https://github.com/RobertoM89/BigRig/releases/download/v1.2/BigRig_v1.2.zip). After downloading the zipped folder, uncompress it wherever you want and move the inner content, i.e. *BigRig* folder, to Maya scripts folder. According to how you unzipped the folder, you may have two nested BigRig folders; make sure to move the inner one, which is the one containing the Python files.
 
 You cand find Maya scripts folder here:  
 
