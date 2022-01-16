@@ -71,7 +71,7 @@ On the menu bar, click on *Help → Help* to read a description of each command 
 Read the following Sections to have a better understanding of each and every step and function.
 
 ## Download and Install
-First, download the latest version of BigRig [here](https://github.com/RobertoM89/BigRig/releases/download/v1.2/BigRig_v1.2.zip). After downloading the zipped folder, uncompress it wherever you want and move the inner content, i.e. *BigRig* folder, to Maya scripts folder. According to how you unzipped the folder, you may have two nested BigRig folders; make sure to move the inner one, which is the one containing the Python files.
+First, download the latest version of BigRig [here](https://github.com/RobertoM89/BigRig/releases/download/v1.2/BigRig_v1.2.zip). After downloading the zipped folder, uncompress it wherever you want and move the inner content, i.e. *BigRig* folder, to Maya scripts folder. Depending on how you unzipped the folder, you may have two nested BigRig folders; make sure to move the inner one, which is the one containing the Python files.
 
 You cand find Maya scripts folder here:  
 
