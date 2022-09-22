@@ -4,7 +4,7 @@ BigRig - Rig Tools for Autodesk Maya
 **Version 1.3**  
 **March 2022**
 
-**Compatibility: Maya 2019, 2020, 2022 - Python 2.7, Python 3**
+**Compatibility: Maya 2019, 2020, 2022, 2023 - Python 2.7, Python 3**
 
 The latest release of BigRig is available for **download [here](https://github.com/RobertoM89/BigRig/releases/download/v1.3/BigRig_v1.3.zip)**. 
 
@@ -104,7 +104,7 @@ The **Help** menu consists of the following items:
 ## How to Rig Character Limbs with BigRig
 First of all make sure that your character is correctly oriented in Maya world, i.e. with the face pointing towards positive Z axis (from Maya front view you should see character's front). Beside being good practice, it is also necessary for the *Rig Leg* command to work.
 
-In order to orient the joints correctly we suggest the use of **[Coplanar Joint Orient](https://www.highend3d.com/maya/script/coplanar-joint-orient-for-maya?fbclid=IwAR3wDCc4zsXJugIkTgvRCSoMtmMtNFhxc4ybH8MriBu5dxjOVF1MRRFY7KY)** script by Ilya Seletsky.
+In order to orient the joints correctly we suggest the use of **[Coplanar Joint Orient](https://www.highend3d.com/maya/script/coplanar-joint-orient-for-maya?fbclid=IwAR3wDCc4zsXJugIkTgvRCSoMtmMtNFhxc4ybH8MriBu5dxjOVF1MRRFY7KY)** script by Ilya Seletsky. If you're using a version of Maya based on Python 3 (Maya 2020 or newer), then use our update of **[Coplanar Joint Orient - Py3](https://github.com/michele-BR/CoplanarJointOrient.git)**.
 
 ### Rigging the Legs
 Start creating a joint chain by placing the *hip, knee, ankle, foot* and *toe* joints on the character's left or right leg. You don't need to rename them, as they will be automatically renamed by the script.  
